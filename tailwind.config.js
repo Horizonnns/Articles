@@ -21,6 +21,12 @@ export default {
 		},
 
 		extend: {
+			colors: {
+				blue: {
+					10: '#2b4f79',
+				},
+			},
+
 			boxShadow: {
 				article:
 					'1px 5px 10px 1px #e2e8f0, 0 0 15px 5px #e2e8f0',

@@ -1,6 +1,6 @@
 <script setup>
-import earth from '../assets/images/articles/earth.jpg';
-import vscode from '../assets/images/articles/vscode.jpg';
+import earth from '../../assets/images/articles/earth.jpg';
+import vscode from '../../assets/images/articles/vscode.jpg';
 
 const articles = [
 	{
@@ -27,7 +27,7 @@ const articles = [
 <template>
 	<main class="bg-[#f7f8f8]">
 		<div
-			class="container flex flex-col md:flex-row justify-between md:space-x-8 space-y-8 md:space-y-0 py-10"
+			class="flex flex-col md:flex-row justify-between md:space-x-8 space-y-8 md:space-y-0 py-10"
 		>
 			<div
 				v-for="article in articles"

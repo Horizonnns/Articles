@@ -27,16 +27,16 @@ const articles = [
 <template>
 	<main class="bg-[#f7f8f8]">
 		<div
-			class="container flex justify-between py-10"
+			class="container flex flex-col md:flex-row justify-between md:space-x-8 space-y-8 md:space-y-0 py-10"
 		>
 			<div
 				v-for="article in articles"
 				:key="article.id"
-				class="w-[495px] cursor-pointer overflow-hidden select-none bg-white rounded-xl shadow-sm hover:border hover:shadow-xl hover:-translate-y-2 duration-200"
+				class="cursor-pointer overflow-hidden select-none bg-white rounded-xl shadow-sm hover:shadow-article hover:-translate-y-0.5 duration-200 ease-in-out"
 			>
 				<img :src="article.img" alt="acrticle" />
 
-				<div class="px-8 py-4">
+				<div class="px-8 py-6">
 					<p class="text-2xl font-bold">
 						{{ article.title }}
 					</p>

@@ -12,8 +12,7 @@ export default {
 				DEFAULT: '1rem',
 				sm: '2rem',
 				lg: '4rem',
-				xl: '5rem',
-				'2xl': '6rem',
+				xl: '7rem',
 			},
 
 			screens: {
@@ -21,7 +20,12 @@ export default {
 			},
 		},
 
-		extend: {},
+		extend: {
+			boxShadow: {
+				article:
+					'1px 5px 10px 1px #e2e8f0, 0 0 15px 5px #e2e8f0',
+			},
+		},
 	},
 	plugins: [],
 };

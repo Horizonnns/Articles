@@ -1,3 +1,3 @@
 <template>
-	<h2>Notes</h2>
+	<h2>Тут бкдет notes...</h2>
 </template>

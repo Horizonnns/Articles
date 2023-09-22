@@ -1,6 +1,9 @@
 <script setup>
 import earth from '../../assets/images/articles/earth.jpg';
 import vscode from '../../assets/images/articles/vscode.jpg';
+import { useRoute, useRouter } from 'vue-router';
+const route = useRoute();
+const router = useRouter();
 
 const articles = [
 	{
@@ -22,6 +25,15 @@ const articles = [
 		img: vscode,
 	},
 ];
+
+// Функция для обработки клика на карточке и изменения маршрута
+const handleCardClick = (article) => {
+	if (article.tag === 'Javascript') {
+		router.push('/me'); // Изменить маршрут на /me при клике на карточку с тегом 'Javascript'
+	} else {
+		router.push('/home'); // Изменить маршрут на /home для других карточек
+	}
+};
 </script>
 
 <template>
@@ -32,6 +44,7 @@ const articles = [
 			<div
 				v-for="article in articles"
 				:key="article.id"
+				@click="handleCardClick(article)"
 				class="cursor-pointer overflow-hidden select-none bg-white rounded-xl shadow-sm hover:shadow-article hover:-translate-y-0.5 duration-200 ease-in-out"
 			>
 				<img :src="article.img" alt="acrticle" />

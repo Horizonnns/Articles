@@ -1,6 +1,9 @@
 <script setup>
 import Article from './ArticleTabs/Article.vue';
 import Notes from './ArticleTabs/Notes.vue';
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
 import {
 	TabGroup,
 	TabList,
@@ -16,13 +19,9 @@ const categories = {
 </script>
 
 <template>
-	<div class="flex space-x-3">
-		<router-link to="/me">me</router-link>
-		<router-link to="/home">home</router-link>
-		<router-view />
-	</div>
+	<router-view v-if="route.path !== '/'" />
 
-	<section class="bg-[#f7f8f8]">
+	<section v-else class="bg-[#f7f8f8]">
 		<div
 			class="container py-4 flex flex-col items-center justify-between"
 		>

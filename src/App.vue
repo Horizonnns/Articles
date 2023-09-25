@@ -1,10 +1,14 @@
 <script setup>
-import ArticleTabs from './components/ArticleTabs.vue';
+import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 </script>
 
 <template>
-	<ArticleTabs />
+	<section class="bg-[#f7f8f8]">
+		<Header />
 
-	<Footer />
+		<router-view />
+
+		<Footer />
+	</section>
 </template>

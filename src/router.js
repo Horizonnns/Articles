@@ -1,5 +1,6 @@
-import Home from './views/Home.vue';
-import Me from './views/Me.vue';
+import Articles from './components/Articles.vue';
+import OwnArticle from './views/OwnArticle.vue';
+import Notes from './views/Notes.vue';
 import {
 	createRouter,
 	createWebHistory,
@@ -9,14 +10,19 @@ export default createRouter({
 	history: createWebHistory(),
 	routes: [
 		{
-			name: 'Home',
-			path: '/home',
-			component: Home,
+			name: '',
+			path: '/',
+			component: Articles,
 		},
 		{
-			name: 'Me',
-			path: '/me',
-			component: Me,
+			name: 'OwnArticle',
+			path: '/OwnArticle',
+			component: OwnArticle,
+		},
+		{
+			name: 'Notes',
+			path: '/Notes',
+			component: Notes,
 		},
 	],
 });

@@ -1,39 +1,43 @@
 <script setup>
-const navs = [
-	{
-		id: 1,
-		title: 'telegram',
-	},
-	{
-		id: 2,
-		title: 'insta',
-	},
-	{
-		id: 3,
-		title: 'github',
-	},
-];
+import IconTelegram from './ui/IconTelegram.vue';
+import IconGithub from './ui/IconGithub.vue';
+import IconYtube from './ui/IconYtube.vue';
 </script>
 
 <template>
 	<footer
 		class="container w-full flex justify-between py-4"
 	>
-		<div class="text-gray-400 text-xl">
-			<p class="font-bold">Kasim</p>
-			<p>Frontend Developer</p>
+		<div class="text-gray-10 space-y-2">
+			<p class="font-medium">
+				Kasim Saidakbarovich
+			</p>
+			<p class="text-sm text-gray-20">
+				Frontend Developer (Vue, Vite,
+				TailwindCss...)
+			</p>
 		</div>
 
 		<div
 			class="flex items-center space-x-6 text-blue-800 font-bold"
 		>
-			<ul v-for="nav in navs" :key="nav.id">
-				<li
-					class="cursor-pointer text-gray-400 hover:text-gray-500"
-				>
-					{{ nav.title }}
-				</li>
-			</ul>
+			<a
+				href="https://t.me/Horizonnns"
+				target="_blank"
+			>
+				<IconTelegram />
+			</a>
+
+			<a
+				href="https://github.com/MeKess/"
+				target="_blank"
+			>
+				<IconGithub />
+			</a>
+
+			<a href="#" target="_blank">
+				<IconYtube />
+			</a>
 		</div>
 	</footer>
 </template>

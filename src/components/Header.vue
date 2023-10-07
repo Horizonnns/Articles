@@ -1,25 +1,29 @@
 <script setup>
-import { useRouter } from 'vue-router';
-const router = useRouter();
-
+import { useRoute, useRouter } from 'vue-router';
 import {
 	TabGroup,
 	TabList,
 	Tab,
 } from '@headlessui/vue';
 
-const categories = [
-	{ path: 'main', title: 'Главная' },
+const route = useRoute();
+const router = useRouter();
+
+const pages = [
 	{
-		path: 'article',
-		title: 'Заметки',
+		name: 'Главная',
+		path: '/',
+	},
+	{
+		name: 'Заметки',
+		path: '/notes',
 	},
 ];
 
-const handleCardClick = (name) => {
-	if (name.path === 'main') {
+const changePage = (page) => {
+	if (page.path === '/') {
 		router.push('/');
-	} else if (name.path === 'article') {
+	} else if (page.path === '/notes') {
 		router.push('/notes');
 	}
 };
@@ -43,21 +47,20 @@ const handleCardClick = (name) => {
 				<div class="flex items-center space-x-8">
 					<Tab
 						class="w-full"
-						v-for="name in categories"
+						v-for="page in pages"
 						as="template"
-						:key="name"
-						@click="handleCardClick(name)"
-						v-slot="{ selected }"
+						:key="page"
+						@click="changePage(page)"
 					>
 						<button
 							class="flex text-xl duration-200 outline-none"
 							:class="[
-								selected
+								page.path === route.path
 									? 'text-blue-10'
 									: 'text-gray-300',
 							]"
 						>
-							{{ name.title }}
+							{{ page.name }}
 						</button>
 					</Tab>
 				</div>

@@ -9,7 +9,7 @@ export default {
 		container: {
 			center: true,
 			padding: {
-				DEFAULT: '1rem',
+				DEFAULT: '1.5rem',
 				sm: '2rem',
 				lg: '4rem',
 				xl: '7rem',
@@ -24,6 +24,10 @@ export default {
 			colors: {
 				blue: {
 					10: '#2b4f79',
+				},
+				gray: {
+					10: '#6d6d6d',
+					20: '#959595',
 				},
 			},
 

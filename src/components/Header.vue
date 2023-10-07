@@ -44,7 +44,7 @@ const changePage = (page) => {
 					Kasim
 				</a>
 
-				<div class="flex items-center space-x-8">
+				<div class="flex items-center space-x-6">
 					<Tab
 						class="w-full"
 						v-for="page in pages"
@@ -53,7 +53,7 @@ const changePage = (page) => {
 						@click="changePage(page)"
 					>
 						<button
-							class="flex text-xl duration-200 outline-none"
+							class="flex duration-200 outline-none font-mono"
 							:class="[
 								page.path === route.path
 									? 'text-blue-10'

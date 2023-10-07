@@ -29,7 +29,7 @@ export default {
 
 			boxShadow: {
 				article:
-					'1px 5px 10px 1px #e2e8f0, 0 0 15px 5px #e2e8f0',
+					'0 2px 15px 0 #eaeaea, 0 0 5px 3px #eaeaea',
 			},
 		},
 	},

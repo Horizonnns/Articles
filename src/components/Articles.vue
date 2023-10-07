@@ -40,7 +40,7 @@ const handleCardClick = (article) => {
 			v-for="article in articles"
 			:key="article.id"
 			@click="handleCardClick(article)"
-			class="cursor-pointer overflow-hidden select-none bg-white rounded-xl shadow-sm hover:shadow-article hover:-translate-y-0.5 duration-200 ease-in-out"
+			class="cursor-pointer overflow-hidden select-none bg-white rounded-xl shadow-sm hover:shadow-article hover:-translate-y-0.5 duration-200 ease-in-out border border-gray-100 hover:border-gray-200"
 		>
 			<img :src="article.img" alt="acrticle" />
 

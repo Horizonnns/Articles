@@ -41,7 +41,11 @@ const changePage = (page) => {
 					href="/"
 					class="text-3xl uppercase font-bold cursor-pointer"
 				>
-					Kasim
+					<span>с</span>
+					<span class="text-red-400">т</span>
+					<span class="text-green-400">а</span>
+					<span class="text-yellow-400">т</span>
+					<span>ейная</span>
 				</a>
 
 				<div class="flex items-center space-x-6">

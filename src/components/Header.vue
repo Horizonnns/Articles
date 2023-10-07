@@ -31,15 +31,15 @@ const changePage = (page) => {
 
 <template>
 	<header
-		class="container py-4 flex flex-col items-center justify-between"
+		class="container pt-4 flex flex-col items-center justify-between"
 	>
 		<TabGroup>
 			<TabList
-				class="w-full flex items-center justify-between"
+				class="w-full flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
 			>
 				<a
 					href="/"
-					class="text-3xl uppercase font-bold cursor-pointer"
+					class="text-3xl uppercase font-bold font-mono cursor-pointer"
 				>
 					<span>с</span>
 					<span class="text-red-400">т</span>

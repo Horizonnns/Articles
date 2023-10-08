@@ -1,5 +1,5 @@
 import Articles from './components/Articles.vue';
-import OwnArticle from './views/OwnArticle.vue';
+import Post from './views/Post.vue';
 import Notes from './views/Notes.vue';
 import {
 	createRouter,
@@ -15,14 +15,14 @@ export default createRouter({
 			component: Articles,
 		},
 		{
-			name: 'OwnArticle',
-			path: '/OwnArticle',
-			component: OwnArticle,
-		},
-		{
 			name: 'Notes',
 			path: '/Notes',
 			component: Notes,
+		},
+		{
+			name: 'Post',
+			path: '/post/:id/:title',
+			component: Post,
 		},
 	],
 });

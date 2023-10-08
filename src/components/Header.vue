@@ -31,7 +31,7 @@ const changePage = (page) => {
 
 <template>
 	<header
-		class="container pt-4 flex flex-col items-center justify-between"
+		class="container flex flex-col items-center justify-between py-6 md:py-8"
 	>
 		<TabGroup>
 			<TabList

@@ -6,7 +6,7 @@ import IconYtube from './ui/IconYtube.vue';
 
 <template>
 	<footer
-		class="container w-full flex justify-between py-4"
+		class="container w-full flex justify-between pt-6 md:pt-8"
 	>
 		<div class="text-gray-10 space-y-2">
 			<p class="font-medium">

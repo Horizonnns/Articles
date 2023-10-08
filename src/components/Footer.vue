@@ -29,7 +29,7 @@ import IconYtube from './ui/IconYtube.vue';
 			</a>
 
 			<a
-				href="https://github.com/MeKess/"
+				href="https://github.com/Horizonnns/"
 				target="_blank"
 			>
 				<IconGithub />
